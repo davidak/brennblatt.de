@@ -23,16 +23,17 @@ brennblatt.de {
 
   gzip
 
-  expires {
-    match .js$ 1m
-    match .css$ 1m
-    match .html$ 1d
-    match .jpg$ 1m
-    match .jpeg$ 1m
-    match .png$ 1m
-    match .gif$ 1m
-    match .ico$ 1m
-    match .txt$ 1m
-    match .ttf$ 1m
-  }
+# plugin missing in NixOS https://github.com/NixOS/nixpkgs/issues/14671
+#  expires {
+#    match .js$ 1m
+#    match .css$ 1m
+#    match .html$ 1d
+#    match .jpg$ 1m
+#    match .jpeg$ 1m
+#    match .png$ 1m
+#    match .gif$ 1m
+#    match .ico$ 1m
+#    match .txt$ 1m
+#    match .ttf$ 1m
+#  }
 }
