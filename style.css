@@ -1,0 +1,382 @@
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oleo Script'), local('OleoScript-Regular'), url('OleoScript.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('OpenSans.ttf') format('truetype');
+}
+
+body {
+background-color: #000000;
+background-image:url(hintergrund.jpg); /* http://jakezdaniel.deviantart.com/art/Texture-3B-108044404 */
+background-repeat:repeat;
+font-size: 1em;
+font-family: 'Open Sans', Verdana, sans-serif;
+color:#ccc;
+/* keinen horizontalen Scrollbalken, nur vertikal */
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+h2 {
+	font-size: 1em;
+	font-weight: bold;
+	height: 1em;
+	margin-top: 0px;
+	margin-bottom: 1em;
+	opacity: 0.8;
+}
+
+#foto h2 {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#video {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ueber {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+#kontakt {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+#impressum {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+#impressum a:link,a:active,a:visited {
+    text-decoration: none;
+}
+
+a:link,a:active,a:visited {
+    color: #929292;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+header {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	height: 90px;
+	line-height: 90px;
+	color:#aaa;
+}
+
+header nav {
+	float: right;
+}
+
+header h1 {
+	text-align: center;
+	margin: 0px;
+	font-size: 2em;
+	font-family: 'Oleo Script', cursive;
+	font-weight: 400;
+}
+
+header a:link,a:active,a:visited {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+header a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+header ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+header li {
+	display: inline;
+    margin: 1px;
+}
+
+.fotorama {
+	width: 100%;
+}
+.fotorama__stage {
+	width: 100%;
+	padding-bottom: 80px;
+	top: -40px;
+	left: -8px;
+}
+
+.fotorama__nav {
+	top: -40px;
+}
+
+.fotorama__img {
+	border: 8px solid whiteSmoke;
+}
+
+.fotorama--fullscreen img {
+	border: 0px;
+}
+
+.fotorama--fullscreen .fotorama__wrap .fotorama__stage {
+	padding-bottom: 0px;
+	top: 0px;
+}
+
+.pattern ul {
+	padding: 0px;
+}
+.list li {
+  display: table;
+  width: 100%;
+  padding-bottom: 4px;
+}
+.list li a:link,a:active,a:visited {
+    text-decoration: none;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 40%;
+  padding-right: 1em;
+}
+.li-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 60%;
+}
+.li-head {
+  margin: 0;
+}
+.li-sub {
+  margin: 0;
+}
+
+nav {
+	display: none;
+}
+
+@media all and (min-width: 40em) {
+	header h1 {
+	font-size: 2.5em;
+	float: left;
+	}
+	nav {
+		display: block;
+		font-size: 1.2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	.fotorama__img {
+		border: 16px solid whiteSmoke;
+	}
+	
+	.fotorama__stage__shaft {
+		left: -17px;
+	}
+  .list {
+  	margin: 0 auto;
+    padding: 0px;
+    overflow: hidden;
+  }
+  .list li {
+    padding: 0.5%;
+    display: block;
+    width: 49%;
+    float: left;
+    background: none;
+    border: 0;
+  }
+  .inner {
+    display: block;
+  }
+  .li-img, .li-text, .inner {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  .li-text {
+    padding: 0.5em 0;
+  }
+}
+
+@media all and (min-width: 60em) {
+	h2 {
+		font-size: 1.5em;
+	}
+	.fotorama__img {
+		border: 16px solid whiteSmoke;
+	}
+	
+	.fotorama__stage__shaft {
+		left: -17px;
+	}
+	header h1 {
+		font-size: 3em;
+		float: left;
+	}
+	nav {
+		display: block;
+		font-size: 1.5em;
+	}
+  .list li {
+    width: 32.3%;
+  }
+	input[type=text],
+	input[type=email],
+	textarea {
+		width: 60% !important;
+	}
+	input[type=text],
+	input[type=email] {
+		width: 30% !important;
+	}
+}
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+
+#kontakt {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+	width: 15%;
+	float: left;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 85%;
+  float: right;
+}
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email] {
+	width: 40%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	outline: 0;
+	border-color: #4697e4;
+}
+
+@media (max-width: 40em) {
+  form > div {
+    margin: 0 0 15px 0; 
+  }
+  form > div > label,
+  legend {
+	width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+
+#response h2 {
+	font-family: 'Oleo Script', cursive;
+	font-size: 4em;
+	opacity: 0.6;
+	margin-bottom: 20px;
+}

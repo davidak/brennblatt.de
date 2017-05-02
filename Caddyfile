@@ -1,0 +1,37 @@
+brennblatt.de {
+   root /var/www/brennblatt.de/
+
+   log /var/log/caddy/brennblatt.de.access.log {
+    rotate {
+      size 100 # MB
+      age 93 # 3 months
+      keep 10 # max. 10 files
+    }
+   }
+
+   errors {
+    log /var/log/caddy/brennblatt.de.error.log {
+      size 50 # MB
+      age 31 # 1 month
+      keep 5 # max. 5 files
+    }
+   }
+   
+   gzip
+
+   expires {
+    match .js$ 1m
+    match .css$ 1m
+    match .html$ 1d
+    match .jpg$ 1m
+    match .jpeg$ 1m
+    match .png$ 1m
+    match .gif$ 1m
+    match .ico$ 1m
+    match .txt$ 1m
+    match .ttf$ 1m
+   }
+
+   fastcgi / /var/run/php5-fpm.sock php
+}
+
