@@ -27,10 +27,10 @@
 
 <nav>
 <ul>
-	<li><a href="#foto">Foto</a></li> | 
-	<li><a href="#video">Video</a></li> | 
-	<li><a href="#ueber">Der Künstler</a></li> | 
-	<li><a href="#kontakt">Kontakt</a></li> | 
+	<li><a href="#foto">Foto</a></li> |
+	<li><a href="#video">Video</a></li> |
+	<li><a href="#ueber">Der Künstler</a></li> |
+	<li><a href="#kontakt">Kontakt</a></li> |
 	<li><a href="/impressum.html" rel="nofollow">Impressum</a></li>
 </ul>
 </nav>
@@ -145,40 +145,8 @@ Eine richtige Beschreibung des Künstlers Karl Brennblatt folgt bald. Die Seite 
 </section>
 
 <section id="kontakt">
-<h2>Kontaktformular</h2>
-<p>oder eine E-Mail an karl at brennblatt punkt de</p>
-
-<div id="response"></div>
-
-<form id="kontakt_form" method="post" action="senden_ohne_js.php">  
-  <div>
-    <label class="desc" for="von">Name</label>
-    <div>
-      <input id="von" name="von" type="text" value="" size="8" tabindex="1">
-    </div>
-  </div>
-    
-  <div>
-    <label class="desc" for="mail">E-Mail</label>
-    <div>
-      <input id="mail" name="mail" type="email" spellcheck="false" value="" maxlength="255" tabindex="2"> 
-   </div>
-  </div>
-    
-  <div>
-    <label class="desc" for="nachricht">Nachricht</label>
-    <div>
-      <textarea id="nachricht" name="nachricht" spellcheck="true" rows="10" cols="50" tabindex="3"></textarea>
-    </div>
-  </div>
-
-  <div>
-		<div>
-  		<input id="submit" type="submit" value="Abschicken">
-    </div>
-</div>
-  
-</form>
+<h2>Kontakt</h2>
+<p>Sende eine E-Mail an karl at brennblatt.de!</p>
 </section>
 
 <footer>
@@ -186,7 +154,7 @@ Eine richtige Beschreibung des Künstlers Karl Brennblatt folgt bald. Die Seite 
 </footer>
 
 <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="magnific-popup.js"></script> 
+<script src="magnific-popup.js"></script>
 <script src="fotorama/fotorama.js"></script>
 
 <!-- Video Lightbox -->
@@ -203,34 +171,6 @@ Eine richtige Beschreibung des Künstlers Karl Brennblatt folgt bald. Die Seite 
         });
       });
 </script>
-
-<!-- Kontaktformular abschicken -->
-<script type="text/javascript">
-			$(document).ready(function() {
-				$("#kontakt_form").submit(function() {
-						if($("#von").val() == "" || $("#mail").val() == "" || $("#nachricht").val() == "") {
-							$("#response").html("<p>Bitte fülle alle Felder aus.</p>");
-						} else {
-							$("#submit").attr("disabled","disabled");
-							$("#response").html("<p>versende...</p>");
-							$.ajax({
-								type: "POST",
-								url: "senden.php",
-								data: "von=" + $("#von").val() + "&mail=" + $("#mail").val() + "&betreff=" + $("#betreff").val() + "&nachricht=" + $("#nachricht").val(),
-								success: function(msg)
-								{
-										$("#response").html(msg);
-										hide_form();
-								}
-							});
-						}
-						return false;
-					});
-				});
-</script>
-
-<!-- Kontaktformular ausblenden -->
-<script>function hide_form() {document.getElementById('kontakt_form').style.display='none';}</script>
 
 <!-- Piwik -->
 <script type="text/javascript">
@@ -250,4 +190,3 @@ Eine richtige Beschreibung des Künstlers Karl Brennblatt folgt bald. Die Seite 
 
 </body>
 </html>
-
