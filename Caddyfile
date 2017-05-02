@@ -1,25 +1,29 @@
+www.brennblatt.de {
+  redir https://brennblatt.de{uri}
+}
+
 brennblatt.de {
-   root /var/www/brennblatt.de/
+  root /var/www/brennblatt/web/
 
-   log /var/log/caddy/brennblatt.de.access.log {
+  log /var/www/brennblatt/log/access.log {
     rotate {
-      size 100 # MB
-      age 93 # 3 months
-      keep 10 # max. 10 files
+      size 100
+      age 96
+      keep 10
     }
-   }
+  }
 
-   errors {
-    log /var/log/caddy/brennblatt.de.error.log {
-      size 50 # MB
-      age 31 # 1 month
-      keep 5 # max. 5 files
+  errors {
+    log /var/www/brennblatt/log/error.log {
+      size 100
+      age 96
+      keep 10
     }
-   }
-   
-   gzip
+  }
 
-   expires {
+  gzip
+
+  expires {
     match .js$ 1m
     match .css$ 1m
     match .html$ 1d
@@ -30,8 +34,5 @@ brennblatt.de {
     match .ico$ 1m
     match .txt$ 1m
     match .ttf$ 1m
-   }
-
-   fastcgi / /var/run/php5-fpm.sock php
+  }
 }
-
