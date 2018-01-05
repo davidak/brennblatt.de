@@ -6,19 +6,17 @@ brennblatt.de {
   root /var/www/brennblatt/web/
 
   log /var/www/brennblatt/log/access.log {
-    rotate {
-      size 100
-      age 96
-      keep 10
-    }
+    rotate_size 100
+    rotate_age 96
+    rotate_keep 10
+    rotate_compress
   }
 
-  errors {
-    log /var/www/brennblatt/log/error.log {
-      size 100
-      age 96
-      keep 10
-    }
+  errors /var/www/brennblatt/log/error.log {
+    rotate_size 100
+    rotate_age 96
+    rotate_keep 10
+    rotate_compress
   }
 
   gzip
